@@ -20,7 +20,4 @@
 
 ;; dont't generate the foo~ #foo# file
 (setq auto-save-default nil)
-
-
-
-
+(setq make-backup-files nil)
