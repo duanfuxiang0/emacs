@@ -1,6 +1,6 @@
 # emacs
 
-1. install NeoTree
+1. install [NeoTree](https://www.emacswiki.org/emacs/NeoTree_%E4%B8%AD%E6%96%87wiki)
 
 (1) clone
 ```
