@@ -2,15 +2,22 @@
 ;; fuxiang .emacs config
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; hide scroll 
-(scroll-bar-mode -1)
-;; hide menu
-(menu-bar-mode -1)
-;; hide tool
-(tool-bar-mode -1)
+;; Theme - use built-in dark theme for eye comfort
+(load-theme 'wombat t)
+;; Other built-in options: 'tango-dark 'misterioso 'deeper-blue 'manoj-dark
 
-;; line number
-(global-linum-mode t)
+;; hide scroll
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+;; hide menu
+(when (fboundp 'menu-bar-mode)
+  (menu-bar-mode -1))
+;; hide tool
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+
+;; line number (upgraded to display-line-numbers-mode)
+(global-display-line-numbers-mode t)
 
 ;; hide welcome screen
 (setq inhibit-splash-screen t)
@@ -28,8 +35,8 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-;;Set font and size
-(set-default-font "Monaco 20")
+;;Set font and size (upgraded to set-frame-font)
+(set-frame-font "Monaco 20" nil t)
 
 ;; Use spaces instead of tabs
 (setq-default indent-tabs-mode nil) 
